@@ -8,13 +8,13 @@ import (
 )
 
 func main() {
-	li, err := net.Listen("tcp", ":8080")
+	li, err := net.Listen("tcp", ":8080")  // Set up the Listener
 	if err != nil {
 		log.Panic(err)
 	}
 	defer li.Close()
 
-	for {
+	for {                                   //Create an eternal loop to accept connections
 		conn, err := li.Accept()
 		if err != nil {
 			log.Println(err)

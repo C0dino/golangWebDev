@@ -35,5 +35,5 @@ func handle(conn net.Conn) {
 	//We Never get here
 	//we have an open stream connection
 	//how does the above reader know when its done?
-
+	fmt.Println("Code got here")
 }
